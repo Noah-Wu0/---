@@ -1,0 +1,97 @@
+.features {
+  padding: 10rem 0;
+  background: var(--bg-light); /* Premium Light Gray */
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.header {
+  margin-bottom: 6rem;
+}
+
+.header h2 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+  font-family: var(--font-sans);
+}
+
+.header p {
+  color: var(--text-gray);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+}
+
+.card:hover {
+  border-bottom: 4px solid var(--accent-neon);
+}
+
+.hugeNum {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 16rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.03);
+  line-height: 1;
+  letter-spacing: -10px;
+  user-select: none;
+  transition: color 0.5s ease;
+}
+
+.card:hover .hugeNum {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.cardContent h3 {
+  font-size: 1.85rem;
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+  letter-spacing: -1px;
+}
+
+.cardContent p {
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .bentoGrid { grid-template-columns: repeat(2, 1fr); }
+  .card:nth-child(3) { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 2rem; }
+  .bentoGrid { grid-template-columns: 1fr; }
+  .card:nth-child(3) { grid-column: span 1; }
+  .card { min-height: 320px; }
+  .hugeNum { font-size: 10rem; }
+}

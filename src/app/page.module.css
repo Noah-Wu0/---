@@ -1,0 +1,82 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-secondary);
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f8f9fa;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
